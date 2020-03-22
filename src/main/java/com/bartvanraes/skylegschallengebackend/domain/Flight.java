@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import java.util.Date;
 import java.util.List;
 
 @Data
@@ -18,11 +19,40 @@ public class Flight {
     @Id
     private String Id;
     private int missionId;
+    private String blockTime;
+    private String flightTime;
+    private String actualBlockTime;
+    private String actualFlightTime;
+    private int pax;
+    private String crewString;
+    private Boolean emptyLeg;
+    private Boolean sharedLeg;
+    private String clientPdfUrl;
+    private String blockFuel;
+    private String actualFuelUpliftBefore;
+    private String actualFuelStart;
+    private String actualFuelEnd;
+    private String actualFuelUplift;
+    private String hash;
+    private int number;
+
+    private Date obt;
+    private Date tot;
+    private Date ldt;
+    private Date actualObt;
+    private Date actualTot;
+    private Date actualLdt;
+    private Date actualIbt;
+    private Date updatedAt;
+    private Date createdAt;
+    private Date date;
+
     private Aircraft aircraft;
     private Mission mission;
     private Airport departure;
     private Airport arrival;
     private List<UserAgenda> userAgendas;
+
     /*
     id: number;
         mission_id: number;

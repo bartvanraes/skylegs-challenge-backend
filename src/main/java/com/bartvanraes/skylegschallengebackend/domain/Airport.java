@@ -16,9 +16,30 @@ public class Airport {
     @Id
     private String id;
     private int countryId;
+    private String kind;
+    private String icao;
+    private String iata;
     private String name;
     private String city;
-
+    private String distanceFromCity;
+    private int elevation;
+    private int longitdude;
+    private String timezone;
+    private String fuel;
+    private String airportOfEntry;
+    private Boolean customs;
+    private Boolean designatedInternational;
+    private Boolean landingRights;
+    private Boolean userFees;
+    private Boolean handelingMandetory;
+    private Boolean slotsRequired;
+    private String approach;
+    private String runways;
+    private int length;
+    private int width;
+    private String label;
+    private String countryName;
+    private Boolean departure;
     /*
     id: number;
         country_id: number;

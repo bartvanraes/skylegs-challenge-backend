@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 
 @Mapper
 public interface FlightMapper {
-    //FlightMapper INSTANCE = Mappers.getMapper(FlightMapper.class);
+    FlightMapper INSTANCE = Mappers.getMapper(FlightMapper.class);
 
     FlightDTO flightToFlightDTO(Flight flight);
 }

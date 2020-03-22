@@ -16,6 +16,10 @@ public class Aircraft {
     @Id
     private String Id;
     private String registration;
+    private String phone;
+    private String label;
+    private String profilePictureUrl;
+    private AircraftVariant variant;
 
     /*
     id: number;
