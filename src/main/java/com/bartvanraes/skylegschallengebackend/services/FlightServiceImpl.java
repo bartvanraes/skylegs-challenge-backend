@@ -2,12 +2,14 @@ package com.bartvanraes.skylegschallengebackend.services;
 
 import com.bartvanraes.skylegschallengebackend.api.v1.mapper.FlightMapper;
 import com.bartvanraes.skylegschallengebackend.api.v1.model.FlightDTO;
+import com.bartvanraes.skylegschallengebackend.domain.Flight;
 import com.bartvanraes.skylegschallengebackend.repositories.FlightRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
+import java.util.Date;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -39,6 +41,17 @@ public class FlightServiceImpl implements FlightService {
     @Override
     public Mono<FlightDTO> getFlightByMissionId(int missionId) {
         return flightRepository.findByMissionId(missionId)
+                .map(flightMapper::flightToFlightDTO);
+    }
+
+    @Override
+    public Mono<FlightDTO> updateRadiationDose(int missionId, double dose) {
+        return flightRepository.findByMissionId(missionId)
+                .flatMap(flight -> {
+                    flight.setRadiationDose(dose);
+
+                    return flightRepository.save(flight);
+                })
                 .map(flightMapper::flightToFlightDTO);
     }
 }

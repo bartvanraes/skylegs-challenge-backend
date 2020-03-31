@@ -35,6 +35,7 @@ public class Flight {
     private String actualFuelUplift;
     private String hash;
     private int number;
+    private double radiationDose;
 
     private Date obt;
     private Date tot;
