@@ -12,4 +12,5 @@ public interface AircraftVariantMapper {
     AircraftVariantMapper INSTANCE = Mappers.getMapper(AircraftVariantMapper.class);
 
     AircraftVariantDTO aircraftVariantToAircraftVariantDTO(AircraftVariant aircraftVariant);
+    AircraftVariant aircraftVariantDTOToAircraftVariant(AircraftVariantDTO aircraftVariant);
 }

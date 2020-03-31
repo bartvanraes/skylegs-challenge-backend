@@ -10,4 +10,5 @@ public interface UserAgendaMapper {
     UserAgendaMapper INSTANCE = Mappers.getMapper(UserAgendaMapper.class);
 
     UserAgendaDTO userAgendaToUserAgendaDTO(UserAgenda userAgenda);
+    UserAgenda userAgendaDTOToUserAgenda(UserAgendaDTO userAgenda);
 }

@@ -10,4 +10,5 @@ public interface MissionMapper {
     MissionMapper INSTANCE = Mappers.getMapper(MissionMapper.class);
 
     MissionDTO missionToMissionDTO(Mission mission);
+    Mission missionDTOToMission(MissionDTO mission);
 }

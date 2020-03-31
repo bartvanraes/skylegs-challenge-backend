@@ -10,4 +10,5 @@ public interface AirportMapper {
     AirportMapper INSTANCE = Mappers.getMapper(AirportMapper.class);
 
     AirportDTO airportToAirportDTO(Airport airport);
+    Airport airportDTOToAirport(AirportDTO airport);
 }

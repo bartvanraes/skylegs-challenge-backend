@@ -5,7 +5,7 @@ import lombok.Data;
 
 @Data
 public class AircraftDTO {
-    private String Id;
+    private String id;
     private String registration;
     private String phone;
     private String label;

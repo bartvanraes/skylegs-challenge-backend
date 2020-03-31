@@ -17,7 +17,7 @@ import java.util.List;
 @AllArgsConstructor
 public class Flight {
     @Id
-    private String Id;
+    private String id;
     private int missionId;
     private String blockTime;
     private String flightTime;

@@ -62,11 +62,11 @@ public class FlightDTO {
     private Date createdAt;
     private Date date;
 
-    private Aircraft aircraft;
-    private Mission mission;
-    private Airport departure;
-    private Airport arrival;
+    private AircraftDTO aircraft;
+    private MissionDTO mission;
+    private AirportDTO departure;
+    private AirportDTO arrival;
     @JsonProperty("user_agendas")
-    private List<UserAgenda> userAgendas;
+    private List<UserAgendaDTO> userAgendas;
 
 }

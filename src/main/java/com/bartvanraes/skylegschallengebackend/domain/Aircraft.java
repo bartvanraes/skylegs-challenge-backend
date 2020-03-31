@@ -14,7 +14,7 @@ import org.springframework.data.annotation.Id;
 @AllArgsConstructor
 public class Aircraft {
     @Id
-    private String Id;
+    private String id;
     private String registration;
     private String phone;
     private String label;

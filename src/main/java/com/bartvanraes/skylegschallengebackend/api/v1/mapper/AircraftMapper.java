@@ -10,4 +10,5 @@ public interface AircraftMapper {
     AircraftMapper INSTANCE = Mappers.getMapper(AircraftMapper.class);
 
     AircraftDTO aircraftToAircraftDTO(Aircraft aircraft);
+    Aircraft aircraftDTOToAircraft(AircraftDTO aircraft);
 }
